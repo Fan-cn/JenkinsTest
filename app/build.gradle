@@ -27,9 +27,10 @@ android {
             signingConfig signingConfigs.release//打包命令行：gradlew assembleRelease
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        //自定义输出APK的文件名
         android.applicationVariants.all { variant ->
             variant.outputs.all {
-                def releaseTime = new Date().format("yyyy-MM-dd HH_mm", TimeZone.getDefault())
+                def releaseTime = new Date().format("yyyy-MM-dd_HH/mm", TimeZone.getDefault())
                 outputFileName = "JenkinsTest_${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime}.apk"
             }
         }
