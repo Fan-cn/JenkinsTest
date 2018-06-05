@@ -17,7 +17,7 @@ android {
             storeFile file("key_test.jks")//文件的相对路径
             storePassword 'keytest'
             keyAlias 'key_test'
-            keyPassword 'key_test'
+            keyPassword 'keytest'
         }
     }
 
