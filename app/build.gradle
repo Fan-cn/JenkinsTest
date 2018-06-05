@@ -29,16 +29,11 @@ android {
         }
         android.applicationVariants.all { variant ->
             variant.outputs.all {
-                def releaseTime = new Date().format("yyyy-MM-dd HH:mm", TimeZone.getDefault())
+                def releaseTime = new Date().format("yyyy-MM-dd HH_mm", TimeZone.getDefault())
                 outputFileName = "JenkinsTest_${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime}.apk"
             }
         }
     }
-
-//    lintOptions {//设置编译的lint开关，程序在buid的时候，会执行lint检查，有任何的错误或者警告提示，都会终止构建
-//        abortOnError false
-//    }
-
 }
 
 dependencies {
