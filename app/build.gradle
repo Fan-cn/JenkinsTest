@@ -29,7 +29,7 @@ android {
         }
         android.applicationVariants.all { variant ->
             variant.outputs.all {
-                def releaseTime = new Date().format("yyyy-MM-dd HH:mm", TimeZone.getDefault())
+                def releaseTime = new Date().format("yyyy-MM-dd HH mm", TimeZone.getDefault())
                 outputFileName = "JenkinsTest_${defaultConfig.versionName}_${defaultConfig.versionCode}_${releaseTime}.apk"
             }
         }
