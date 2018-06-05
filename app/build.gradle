@@ -10,6 +10,17 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    //签名的配置
+    signingConfigs{
+        release{
+            storeFile file("key_test.jks")//文件的相对路径
+            storePassword 'keytest'
+            keyAlias 'key_test'
+            keyPassword 'key_test'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
